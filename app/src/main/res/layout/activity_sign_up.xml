@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/viewContainer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg"
+    android:fitsSystemWindows="true">
+
+    <com.wvs.shoppercrux.helper.MyViewPager
+        android:id="@+id/viewPagerVertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:id="@+id/layout_signup"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingTop="50dp"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp">
+
+            <!-- Name Label -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:theme="@style/TextLabel"
+                android:id="@+id/input_name_label">
+                <EditText android:id="@+id/input_name"
+                    android:typeface="monospace"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords"
+                    android:hint="Name" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!--  Email Label -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:theme="@style/TextLabel"
+                android:id="@+id/input_email_label">
+                <EditText android:id="@+id/input_email"
+                    android:typeface="monospace"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:hint="Email" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!--  Phone Label -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:theme="@style/TextLabel"
+                android:id="@+id/input_phone_label">
+                <EditText android:id="@+id/input_phone"
+                    android:typeface="monospace"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:hint="Phone Number" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- Password Label -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:theme="@style/TextLabel"
+                android:id="@+id/input_password_label">
+                <EditText android:id="@+id/input_password"
+                    android:typeface="monospace"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:hint="Password"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- Signup Button -->
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_signup"
+                android:typeface="monospace"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:padding="12dp"
+                android:text="Submit"
+                android:theme="@style/MaterialButton"/>
+
+            <TextView android:id="@+id/link_login"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:text="Already a member? Login"
+                android:typeface="monospace"
+                android:gravity="center"
+                android:textSize="16dip"/>
+        </LinearLayout>
+
+         <LinearLayout
+            android:id="@+id/layout_otp"
+             android:orientation="vertical"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:paddingLeft="24dp"
+             android:paddingRight="24dp">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="25dp"
+                android:layout_marginTop="100dp"
+                android:src="@drawable/splash" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:gravity="center_horizontal"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:text="@string/msg_sit_back"
+                android:textColor="@android:color/white"
+                android:textSize="16dp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:gravity="center_horizontal"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:text="@string/msg_manual_otp"
+                android:textColor="@android:color/white"
+                android:textSize="12dp" />
+
+
+             <android.support.design.widget.TextInputLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="8dp"
+                 android:layout_marginBottom="8dp"
+                 android:theme="@style/TextLabel"
+                 android:id="@+id/otp_label">
+                 <EditText android:id="@+id/inputOtp"
+                     android:typeface="monospace"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:inputType="phone"
+                     android:hint="@string/lbl_enter_otp" />
+             </android.support.design.widget.TextInputLayout>
+
+             <android.support.v7.widget.AppCompatButton
+                 android:id="@+id/btn_verify_otp"
+                 android:typeface="monospace"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="24dp"
+                 android:layout_marginBottom="24dp"
+                 android:padding="12dp"
+                 android:text="Submit"
+                 android:theme="@style/MaterialButton"/>
+
+             <!--<EditText-->
+             <!--android:id="@+id/inputOtp"-->
+             <!--android:layout_width="120dp"-->
+             <!--android:layout_height="wrap_content"-->
+             <!--android:background="@android:color/white"-->
+             <!--android:fontFamily="sans-serif-light"-->
+             <!--android:gravity="center_horizontal"-->
+             <!--android:hint="@string/lbl_enter_otp"-->
+             <!--android:inputType="number"-->
+             <!--android:maxLength="6"-->
+             <!--android:padding="10dp"-->
+             <!--android:textCursorDrawable="@null"-->
+             <!--android:textSize="18dp" />-->
+
+             <!--<Button-->
+             <!--android:id="@+id/btn_verify_otp"-->
+             <!--android:layout_width="wrap_content"-->
+             <!--android:layout_height="wrap_content"-->
+             <!--android:layout_gravity="center_horizontal"-->
+             <!--android:background="@color/colorPrimaryDark"-->
+             <!--android:paddingLeft="20dp"-->
+             <!--android:paddingRight="20dp"-->
+             <!--android:text="@string/lbl_submit"-->
+             <!--android:textColor="@android:color/white"-->
+             <!--android:textSize="14dp" />-->
+
+
+         </LinearLayout>
+
+    </com.wvs.shoppercrux.helper.MyViewPager>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="60dp"
+        android:indeterminateTint="@color/colorAccent"
+        android:indeterminateTintMode="src_atop"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

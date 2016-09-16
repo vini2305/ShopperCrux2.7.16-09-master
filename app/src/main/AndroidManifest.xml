@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.wvs.shoppercrux">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <!-- EXTERNAL_STORAGE permissions are optional for Android 6.0 onwards. -->
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="22"/>
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="22"/>
+
+    <application
+        android:name=".app.AppController"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/MyMaterialTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyC3JlkPsNgiKnu_oowH2MuMCiX395Oj9iw"/>
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/app_id"/>
+
+        <activity android:name=".activities.MainActivity"/>
+        <activity
+            android:name=".activities.SplashScreen"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.SignUpActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustNothing"/>
+        <activity
+            android:name=".activities.LoginActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustNothing"/>
+
+        <receiver
+            android:name=".classes.ConnectivityReceiver"
+            android:enabled="true">
+            <intent-filter android:priority="99999">
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".activities.StoreMapView"/>
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+        <service
+            android:name=".Utils.HttpService"
+            android:enabled="true"/>
+
+        <activity android:name=".activities.StoreActivity">
+            <meta-data
+                android:name="android.app.Searchable"
+                android:resource="@xml/searchable"
+                android:value=".activities.StoreActivity"/>
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+                <action android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.Product"/>
+        <activity android:name=".activities.ProductList"/>
+        <activity
+            android:name=".activities.ForgotActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name=".activities.StoreDescription"/>
+        <activity android:name=".activities.CartActivity"/>
+        <activity android:name=".activities.WishListActivity"/>
+        <activity android:name=".activities.PasswordReset">
+        </activity>
+        <activity android:name=".activities.CheckoutActivity">
+        </activity>
+        <activity android:name=".activities.UserVerify">
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.wvs.shoppercrux.activities.MainActivity"
+
+    >
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:id="@+id/content_frame">
+
+    <fragment
+        android:id="@+id/map"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/fab2"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginBottom="160dp"-->
+        <!--android:layout_gravity="bottom|end"-->
+        <!--android:layout_marginRight="@dimen/fab_margin"-->
+        <!--android:visibility="invisible"-->
+        <!--app:backgroundTint="@color/labelColor"-->
+        <!--app:elevation="6dp"-->
+        <!--app:pressedTranslationZ="12dp"-->
+        <!--android:src="@drawable/list" />-->
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/fab1"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginBottom="90dp"-->
+        <!--android:layout_gravity="bottom|end"-->
+        <!--android:layout_marginRight="@dimen/fab_margin"-->
+        <!--android:visibility="invisible"-->
+        <!--app:elevation="6dp"-->
+        <!--app:backgroundTint="@color/labelColor"-->
+        <!--app:pressedTranslationZ="12dp"-->
+        <!--android:src="@drawable/pin" />-->
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/fab"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="bottom|end"-->
+        <!--app:elevation="6dp"-->
+        <!--app:backgroundTint="@color/labelColor"-->
+        <!--app:pressedTranslationZ="12dp"-->
+        <!--android:layout_margin="@dimen/fab_margin"-->
+        <!--android:src="@drawable/menu" />-->
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:padding="5dp"
+        fab:menu_animationDelayPerItem="2"
+        fab:menu_backgroundColor="@android:color/transparent"
+        fab:menu_colorNormal="#ff9800"
+        fab:menu_colorPressed="#F2AB00"
+        fab:menu_colorRipple="#EC2723"
+        fab:menu_icon="@drawable/menu"
+        fab:menu_labels_ellipsize="end"
+        fab:menu_labels_hideAnimation="@anim/fab_close"
+        fab:menu_labels_position="left"
+        fab:menu_labels_showAnimation="@anim/fab_open"
+        fab:menu_labels_singleLine="true"
+        fab:menu_labels_style="@style/MenuLabelsStyle"
+        fab:menu_shadowColor="#444">
+
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/listBtn"
+            style="@style/MenuButtonsStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/list"
+            fab:fab_label="View List"
+            fab:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/locationBtn"
+            style="@style/MenuButtonsStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pin"
+            fab:fab_label="Set Location"
+            fab:fab_size="mini" />
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+
+</FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,57 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context="com.wvs.shoppercrux.fragments.StoreFragment">
+
+    <android.support.v7.widget.RecyclerView
+
+        android:id="@+id/recyclerview_store_frag"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:padding="5dp"
+        fab:menu_animationDelayPerItem="2"
+        fab:menu_backgroundColor="@android:color/transparent"
+        fab:menu_colorNormal="#ff9800"
+        fab:menu_colorPressed="#F2AB00"
+        fab:menu_colorRipple="#EC2723"
+        fab:menu_icon="@drawable/menu"
+        fab:menu_labels_ellipsize="end"
+        fab:menu_labels_hideAnimation="@anim/fab_close"
+        fab:menu_labels_position="left"
+        fab:menu_labels_showAnimation="@anim/fab_open"
+        fab:menu_labels_singleLine="true"
+        fab:menu_labels_style="@style/MenuLabelsStyle"
+        fab:menu_shadowColor="#444">
+
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/listBtn"
+            style="@style/MenuButtonsStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/list"
+            fab:fab_label="View Map"
+            fab:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/locationBtn"
+            style="@style/MenuButtonsStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pin"
+            fab:fab_label="Set Location"
+            fab:fab_size="mini" />
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+</FrameLayout>

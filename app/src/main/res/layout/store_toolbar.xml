@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:minHeight="?attr/actionBarSize"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="true"
+    android:background="?attr/colorPrimary"
+    local:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    local:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+
+    <TextView
+        android:id="@+id/storeName"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="40dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:textSize="18dp"/>
+
+</android.support.v7.widget.Toolbar>

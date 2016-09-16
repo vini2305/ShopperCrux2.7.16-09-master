@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+     <item
+        android:id="@+id/action_profile"
+        android:title="My Profile"
+        android:orderInCategory="100"
+        app:showAsAction="collapseActionView" />
+
+    <item
+        android:id="@+id/action_wishlist"
+        android:title="My Wishlist"
+        app:showAsAction="collapseActionView" />
+
+    <item
+        android:id="@+id/action_orders"
+        android:title="My Orders"
+        app:showAsAction="collapseActionView"/>
+
+    <item
+        android:id="@+id/action_reset"
+        android:title="Reset Password"
+        app:showAsAction="collapseActionView"/>
+
+    <item
+        android:id="@+id/action_logout"
+        android:title="Logout"
+        app:showAsAction="collapseActionView"/>
+    <item
+        android:id="@+id/mycart"
+        android:title="My Cart"
+        app:showAsAction="collapseActionView"/>
+
+    <item
+        android:id="@+id/search"
+        android:title="@string/search"
+        app:showAsAction="always"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        />
+
+    <item
+        android:id="@+id/cart"
+        android:title="Cart"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_menu_cart"
+        />
+    <item android:id="@+id/notification"
+        android:title="Notification"
+        android:icon="@drawable/notify"
+        app:showAsAction="always"/>
+
+</menu>

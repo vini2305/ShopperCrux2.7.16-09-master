@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FBA919</color>
+    <color name="gold">#FFBF00</color>
+    <color name="splash">#FBA919</color>
+    <color name="btnHighLight">#DB8804</color>
+    <color name="labelColor">#FC9F00</color>
+    <color name="pink">#FF4081</color>
+    <color name="indigo">#9F489B</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="accent">#FFFFFF</color>
+    <color name="orange"> #FBAA19</color>
+    <color name="disabled">#FFD182</color>
+    <color name="black">#000000</color>
+    <color name="jet">#222222</color>
+    <color name="oil">#333333</color>
+    <color name="monsoon">#777777</color>
+    <color name="jumbo">#888888</color>
+    <color name="aluminum">#999999</color>
+    <color name="base">#AAAAAA</color>
+    <color name="iron">#CCCCCC</color>
+    <color name="white">#FFFFFF</color>
+    <color name="primary">#E43F3F</color>
+    <color name="btn_logut_bg">#ff6861</color>
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="navigationBarColor">#000000</color>
+    <color name="button_send">#277bd5</color>
+    <color name="bg">#E43F3F</color>
+    <color name="resetBtnHighlight">#CC1D1D</color>
+    <color name="btnReset">#E43F3F</color>
+    <color name="lightGray">#F4F4F4</color>
+</resources>
